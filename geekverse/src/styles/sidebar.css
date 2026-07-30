@@ -1,0 +1,229 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+
+  height: 100vh;
+
+  background: #0d0d15;
+  border-right: 1px solid #24263a;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.logo h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #8b5cf6;
+}
+
+.logo-icon {
+  color: #8b5cf6;
+  font-size: 28px;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background: #1d2031;
+}
+
+.menu .active {
+  background: linear-gradient(90deg,#8b5cf6,#6d28d9);
+}
+
+/* Premium */
+
+.premium-box {
+  margin-top: 20px;
+  background: linear-gradient(180deg,#8b5cf6,#5b21b6);
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.premium-box h3 {
+  margin-bottom: 12px;
+}
+
+.premium-box p {
+  color: #ececec;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.premium-box button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: white;
+  color: #6d28d9;
+  font-weight: bold;
+}
+
+/* Dark Mode */
+
+.dark-mode {
+  margin-top: 20px;
+  padding: 18px 20px;
+  background: #12121c;
+  border: 1px solid #24263a;
+  border-radius: 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  width: 48px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #2d2d40;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background: white;
+  transition: .3s;
+}
+
+.switch input:checked + .slider {
+  background: #8b5cf6;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+/* User Card */
+
+.user-card {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #24263a;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.user-card img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-card h4 {
+  font-size: 17px;
+}
+
+.user-card p {
+  font-size: 14px;
+  color: #8b5cf6;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  color: inherit;
+}
+
+/* ===========================
+   MY LIBRARY
+=========================== */
+
+.library-page{
+  padding:30px;
+}
+
+.library-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.library-card{
+background:#1d1b2d;
+padding:18px;
+border-radius:18px;
+text-align:center;
+transition:.3s;
+}
+
+.library-card:hover{
+transform:translateY(-6px);
+}
+
+.library-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+.library-card h3{
+color:white;
+font-size:18px;
+margin-bottom:15px;
+}
+
+.library-card button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:12px;
+background:#8b5cf6;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+.library-card button:hover{
+background:#7c3aed;
+}

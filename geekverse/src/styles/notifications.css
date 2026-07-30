@@ -1,0 +1,41 @@
+.page-container{
+    padding:30px;
+}
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.clear-btn{
+    background:#8b5cf6;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.notification-card{
+    background:#1d1d27;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    color:white;
+}
+
+.notification-card.read{
+    opacity:.6;
+}
+
+.notification-card button{
+    margin-top:15px;
+    background:#8b5cf6;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}

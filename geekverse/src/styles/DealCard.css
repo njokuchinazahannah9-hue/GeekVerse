@@ -1,0 +1,59 @@
+.deal-card{
+    background:#151520;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:25px;
+}
+
+.deal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.deal-header h2{
+    font-size:24px;
+}
+
+.deal-header span{
+    background:#24243a;
+    padding:8px 14px;
+    border-radius:10px;
+    color:#8B5CF6;
+}
+
+.deal-content{
+    display:flex;
+    gap:18px;
+}
+
+.deal-content img{
+    width:120px;
+    border-radius:15px;
+}
+
+.deal-info{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.discount{
+    background:#ef4444;
+    width:max-content;
+    padding:4px 10px;
+    border-radius:8px;
+}
+
+.rating{
+    color:#FFD700;
+}
+
+.price del{
+    color:#777;
+}
+
+.price h2{
+    color:#8B5CF6;
+}

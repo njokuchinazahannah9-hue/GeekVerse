@@ -1,0 +1,409 @@
+/* ==========================================================
+   MANGA DETAILS
+========================================================== */
+
+.manga-details{
+    min-height:100vh;
+    background:#09090b;
+    color:#fff;
+}
+
+/* ==========================================================
+   HERO BACKDROP
+========================================================== */
+
+.manga-backdrop{
+    position:relative;
+    width:100%;
+    height:520px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.manga-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(9,9,11,.97)
+    );
+}
+
+/* ==========================================================
+   MAIN CONTAINER
+========================================================== */
+
+.manga-container{
+    position:relative;
+    z-index:10;
+
+    max-width:1400px;
+    margin:-220px auto 0;
+
+    padding:0 60px 80px;
+
+    display:flex;
+    gap:55px;
+    align-items:flex-start;
+}
+
+/* ==========================================================
+   POSTER
+========================================================== */
+
+.manga-poster{
+    width:320px;
+    height:470px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    flex-shrink:0;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+
+    transition:.35s;
+}
+
+.manga-poster:hover{
+    transform:translateY(-8px);
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.manga-content{
+    flex:1;
+    padding-top:150px;
+}
+
+.manga-content h1{
+    font-size:58px;
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+/* ==========================================================
+   META
+========================================================== */
+
+.manga-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-bottom:30px;
+}
+
+.manga-meta span{
+    background:#181820;
+    color:#ddd;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:15px;
+    font-weight:600;
+}
+
+/* ==========================================================
+   TAGS
+========================================================== */
+
+.genres{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:35px;
+}
+
+.genres span{
+    background:#8B5CF6;
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.genres span:hover{
+    background:#9d72ff;
+    transform:translateY(-3px);
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.overview{
+    max-width:900px;
+
+    color:#d0d0d0;
+
+    line-height:2;
+
+    font-size:17px;
+
+    margin-bottom:45px;
+
+    white-space:pre-line;
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.movie-buttons{
+    display:flex;
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.watch-btn,
+.wishlist-btn{
+
+    border:none;
+
+    border-radius:16px;
+
+    height:56px;
+
+    padding:0 34px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.watch-btn{
+    background:#8B5CF6;
+    color:white;
+}
+
+.watch-btn:hover{
+    background:#9b6cff;
+    transform:translateY(-4px);
+}
+
+.wishlist-btn{
+    background:#181820;
+    color:white;
+    border:1px solid #2e2e39;
+}
+
+.wishlist-btn:hover{
+    background:#262633;
+}
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.movie-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.movie-stats div{
+    background:#13131d;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.3s;
+}
+
+.movie-stats div:hover{
+    border-color:#8B5CF6;
+    transform:translateY(-5px);
+}
+
+.movie-stats span{
+    display:block;
+    color:#888;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.movie-stats h4{
+    font-size:22px;
+    color:white;
+}
+
+/* ==========================================================
+   RECOMMENDATIONS
+========================================================== */
+
+.recommend-section{
+    max-width:1400px;
+    margin:90px auto;
+    padding:0 60px;
+}
+
+.recommend-section h2{
+    font-size:40px;
+    margin-bottom:35px;
+}
+
+.movies-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    gap:28px;
+}
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.loading{
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#09090b;
+
+    color:white;
+
+    font-size:34px;
+
+    font-weight:700;
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#8B5CF6;
+    border-radius:999px;
+}
+
+::-webkit-scrollbar-track{
+    background:#09090b;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1100px){
+
+.manga-container{
+
+flex-direction:column;
+
+align-items:center;
+
+margin-top:-120px;
+
+padding:0 30px 60px;
+
+}
+
+.manga-content{
+
+padding-top:0;
+
+text-align:center;
+
+}
+
+.manga-content h1{
+
+font-size:42px;
+
+}
+
+.manga-meta{
+
+justify-content:center;
+
+}
+
+.genres{
+
+justify-content:center;
+
+}
+
+.movie-buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.movie-stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.overview{
+
+max-width:100%;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.manga-backdrop{
+
+height:300px;
+
+}
+
+.manga-poster{
+
+width:250px;
+height:360px;
+
+}
+
+.manga-content h1{
+
+font-size:32px;
+
+}
+
+.movie-stats{
+
+grid-template-columns:1fr;
+
+}
+
+.recommend-section{
+
+padding:0 20px;
+
+}
+
+}

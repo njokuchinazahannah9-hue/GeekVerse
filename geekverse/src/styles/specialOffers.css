@@ -1,0 +1,65 @@
+.special-offer {
+  margin-top: 35px;
+
+  background: linear-gradient(135deg, #24113b, #5b21b6);
+
+  border-radius: 26px;
+
+  padding: 35px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.offer-content {
+  max-width: 430px;
+}
+
+.offer-content span {
+  color: #facc15;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.offer-content h2 {
+  margin: 18px 0;
+
+  font-size: 42px;
+}
+
+.offer-content p {
+  color: #d8d8d8;
+
+  line-height: 1.8;
+
+  margin-bottom: 28px;
+}
+
+.offer-content button {
+  background: white;
+
+  color: #6d28d9;
+
+  padding: 15px 30px;
+
+  border-radius: 14px;
+
+  font-weight: bold;
+
+  transition: .3s;
+}
+
+.offer-content button:hover {
+  transform: translateY(-3px);
+}
+
+.offer-image img {
+  width: 420px;
+
+  max-width: 100%;
+}

@@ -1,0 +1,119 @@
+.premium-overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(8px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+    z-index:9999;
+}
+
+.premium-modal{
+    width:100%;
+    max-width:560px;
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#171722;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    box-shadow:
+    0 25px 80px rgba(0,0,0,.55);
+
+    animation:pop .25s ease;
+}
+
+@keyframes pop{
+
+from{
+opacity:0;
+transform:scale(.92);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.premium-modal h1{
+font-size:40px;
+margin-bottom:10px;
+text-align:center;
+}
+
+.premium-modal>p{
+text-align:center;
+color:#b7b7b7;
+margin-bottom:35px;
+}
+
+.premium-benefits{
+display:flex;
+flex-direction:column;
+gap:18px;
+
+font-size:18px;
+
+margin-bottom:35px;
+}
+
+.premium-benefits div{
+padding:12px 16px;
+border-radius:14px;
+background:#202032;
+}
+
+.premium-modal h2{
+text-align:center;
+font-size:42px;
+color:#8b5cf6;
+margin-bottom:35px;
+}
+
+.premium-buttons{
+display:flex;
+gap:18px;
+}
+
+.premium-buttons button{
+flex:1;
+height:58px;
+border:none;
+border-radius:16px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:.25s;
+}
+
+.cancel-btn{
+background:#353545;
+color:white;
+}
+
+.cancel-btn:hover{
+background:#47475b;
+}
+
+.upgrade-btn{
+background:#8b5cf6;
+color:white;
+}
+
+.upgrade-btn:hover{
+background:#9d6fff;
+transform:translateY(-2px);
+}

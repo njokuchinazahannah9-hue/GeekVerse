@@ -1,0 +1,2349 @@
+/* ===========================
+   RESET
+=========================== */
+
+.admin-layout{
+    display:flex;
+    min-height:100vh;
+    background:#0F111A;
+}
+
+.admin-main{
+    flex:1;
+    margin-left:280px;
+    display:flex;
+    flex-direction:column;
+}
+
+.admin-content{
+    padding:35px;
+    flex:1;
+}
+
+/* ===================================
+   SIDEBAR
+=================================== */
+
+.admin-sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:280px;
+    height:100vh;
+
+    background:#11131D;
+
+    border-right:1px solid rgba(255,255,255,.05);
+
+    display:flex;
+    flex-direction:column;
+
+    padding:28px;
+}
+
+.admin-logo{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:45px;
+}
+
+.logo-circle{
+    width:58px;
+    height:58px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#8B5CF6,#6D28D9);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-size:22px;
+    font-weight:700;
+}
+
+.admin-logo h2{
+    font-size:22px;
+    color:#fff;
+}
+
+.admin-logo span{
+    font-size:13px;
+    color:#8B8FA8;
+}
+
+.admin-menu{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    flex:1;
+}
+
+.admin-menu a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:15px 18px;
+
+    border-radius:15px;
+
+    color:#9CA3AF;
+
+    transition:.3s;
+}
+
+.admin-menu a svg{
+    font-size:20px;
+}
+
+.admin-menu a:hover{
+    background:#1B1E2C;
+    color:white;
+}
+
+.admin-menu a.active{
+    background:#7C3AED;
+    color:white;
+}
+
+.logout-btn{
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#1B1E2C;
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#EF4444;
+}
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+.dashboard-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.dashboard-header h1{
+    font-size:42px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.dashboard-header p{
+    color:#8A8FA8;
+    font-size:16px;
+}
+
+.date-btn{
+    height:48px;
+    padding:0 24px;
+    border:none;
+    border-radius:14px;
+    background:#1A1D2A;
+    color:white;
+    cursor:pointer;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.stat-card{
+    background:#171923;
+    border-radius:22px;
+    padding:28px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.stat-icon{
+    width:64px;
+    height:64px;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    color:white;
+}
+
+.purple{
+    background:#7C3AED;
+}
+
+.green{
+    background:#22C55E;
+}
+
+.orange{
+    background:#F59E0B;
+}
+
+.blue{
+    background:#0EA5E9;
+}
+
+.stat-content span{
+    color:#9CA3AF;
+    font-size:15px;
+}
+
+.stat-content h2{
+    font-size:38px;
+    margin:8px 0;
+}
+
+.stat-content p{
+    color:#9CA3AF;
+    font-size:14px;
+}
+
+.stat-content strong{
+    color:#22C55E;
+}
+
+/* ================= NAVBAR ================= */
+
+.admin-navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:24px 40px;   /* <-- important */
+
+    width:100%;
+}
+
+.navbar-search{
+
+    width:420px;
+
+    height:52px;
+
+    background:#171923;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 18px;
+
+    gap:12px;
+
+}
+
+.navbar-search input{
+
+    flex:1;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+}
+
+.navbar-search svg{
+
+    color:#8A8FA8;
+
+}
+
+.navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.icon-btn{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#171923;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.admin-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.admin-user img{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+}
+
+.admin-user span{
+
+    color:#8A8FA8;
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   SALES CHART
+========================================== */
+
+.sales-chart-card{
+
+    background:#171923;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    min-height:360px;
+
+}
+
+.chart-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.chart-header h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.chart-header button{
+
+    background:#202330;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+.chart-area{
+
+    height:250px;
+
+    border-radius:18px;
+
+    background:#11131D;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.chart-placeholder{
+
+    color:#8A8FA8;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   DASHBOARD ROW
+========================================== */
+
+.dashboard-row{
+
+    display:grid;
+
+    grid-template-columns:2fr 1.4fr 1.4fr;
+
+    gap:28px;
+
+    margin-top:35px;
+
+    align-items:start;
+
+}
+
+/* ==========================================
+TOP CATEGORIES
+========================================== */
+
+.top-categories,
+.recent-orders{
+
+    background:#171923;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    padding:28px;
+
+    min-height:360px;
+
+}
+
+.top-categories h3,
+.recent-orders h3{
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+}
+
+.placeholder{
+
+    height:250px;
+
+    border-radius:18px;
+
+    background:#11131D;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#888;
+
+}
+
+
+
+/* ==========================================
+TOP CATEGORIES
+========================================== */
+
+.top-categories{
+
+    background:#171923;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    padding:28px;
+
+}
+
+.category-header{
+
+    margin-bottom:30px;
+
+}
+
+.category-header h3{
+
+    font-size:24px;
+
+}
+
+.category-circle{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:35px;
+
+}
+
+.circle{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:
+    conic-gradient(
+        #8B5CF6 0 40%,
+        #3B82F6 40% 66%,
+        #22C55E 66% 84%,
+        #F59E0B 84% 95%,
+        #EC4899 95% 100%
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.circle-center{
+
+    width:120px;
+
+    height:120px;
+
+    background:#171923;
+
+    border-radius:50%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.circle-center h2{
+
+    font-size:34px;
+
+    margin-bottom:5px;
+
+}
+
+.circle-center span{
+
+    color:#8A8FA8;
+
+}
+
+.category-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.category-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.category-item p{
+
+    flex:1;
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+}
+
+.purple{background:#8B5CF6;}
+.blue{background:#3B82F6;}
+.green{background:#22C55E;}
+.orange{background:#F59E0B;}
+.pink{background:#EC4899;}
+
+
+/* ==========================================
+RECENT ORDERS
+========================================== */
+
+.orders-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.orders-header span{
+
+    color:#8B5CF6;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+}
+
+.order-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+    padding-bottom:18px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.order-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.order-image{
+
+    width:50px;
+
+    height:70px;
+
+    border-radius:10px;
+
+    background:#2A2D3B;
+
+}
+
+.order-info h4{
+
+    font-size:15px;
+
+    margin-bottom:5px;
+
+}
+
+.order-info small{
+
+    color:#8A8FA8;
+
+}
+
+.order-right{
+
+    text-align:right;
+
+}
+
+.order-right strong{
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.status{
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.status.completed{
+
+    background:rgba(34,197,94,.15);
+
+    color:#22C55E;
+
+}
+
+.status.processing{
+
+    background:rgba(59,130,246,.15);
+
+    color:#3B82F6;
+
+}
+
+.status.pending{
+
+    background:rgba(245,158,11,.15);
+
+    color:#F59E0B;
+
+}
+
+.system-activity{
+
+    background:#171923;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    min-height:360px;
+
+}
+
+.system-activity h3{
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+RECENT PRODUCTS
+========================================== */
+
+.recent-products{
+
+    background:#171923;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.table-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.table-header h3{
+
+    font-size:24px;
+
+}
+
+.table-header span{
+
+    color:#8B5CF6;
+
+    cursor:pointer;
+
+}
+
+.table-actions svg{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.table-actions svg:hover{
+    color:#EF4444;
+    transform:scale(1.15);
+}
+
+.recent-products table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.recent-products th{
+
+    text-align:left;
+
+    color:#8A8FA8;
+
+    padding:16px 0;
+
+    font-weight:500;
+
+}
+
+.recent-products td{
+
+    padding:18px 0;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+.product-status{
+
+    background:rgba(34,197,94,.15);
+
+    color:#22C55E;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+RECENT USERS
+========================================== */
+
+.recent-users{
+
+    background:#171923;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.user-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px 0;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+.user-item:first-of-type{
+
+    border-top:none;
+
+}
+
+.user-item img{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+}
+
+.user-item h4{
+
+    font-size:15px;
+
+    margin-bottom:5px;
+
+}
+
+.user-item span{
+
+    color:#8A8FA8;
+
+    font-size:13px;
+
+}
+
+
+
+/* ==========================================
+SYSTEM ACTIVITY
+========================================== */
+
+.system-activity{
+
+    background:#171923;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.activity-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+.activity-item:first-of-type{
+
+    border-top:none;
+
+}
+
+.activity-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.activity-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#262838;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+}
+
+.activity-item span{
+
+    font-weight:500;
+
+}
+
+.activity-item small{
+
+    color:#8A8FA8;
+
+}
+
+
+
+/* ==========================================
+   PRODUCTS PAGE
+========================================== */
+
+.products-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.products-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.products-header h1{
+    font-size:38px;
+    font-weight:700;
+    color:white;
+}
+
+.products-header p{
+    margin-top:6px;
+    color:#8B90A7;
+}
+
+.add-product-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 22px;
+
+    border:none;
+    border-radius:14px;
+
+    background:#7C3AED;
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.add-product-btn:hover{
+    background:#8B5CF6;
+}
+
+/* ==========================================
+   TOOLBAR
+========================================== */
+
+.products-toolbar{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+
+.toolbar-right{
+    display:flex;
+    gap:15px;
+}
+
+.filter-btn{
+    padding:14px 18px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#181A27;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+/* ==========================================
+   TABLE CARD
+========================================== */
+
+.products-table-card{
+    background:#181A27;
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.products-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.products-table thead{
+    background:#202334;
+}
+
+.products-table th{
+    padding:18px;
+    text-align:left;
+
+    color:#9CA3AF;
+
+    font-size:14px;
+}
+
+.products-table td{
+    padding:18px;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+    color:white;
+}
+
+/* ==========================================
+   PRODUCT CELL
+========================================== */
+
+.product-cell{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.product-cell img{
+    width:55px;
+    height:55px;
+
+    border-radius:10px;
+
+    object-fit:cover;
+}
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+.status.active{
+    background:#153726;
+    color:#4ADE80;
+}
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.table-actions{
+    display:flex;
+    gap:16px;
+
+    font-size:18px;
+}
+
+.table-actions svg{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.table-actions svg:hover{
+    color:#8B5CF6;
+}
+
+/* ==========================================
+   PAGINATION
+========================================== */
+
+.pagination{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.pagination span{
+    color:#9CA3AF;
+}
+
+.pages{
+    display:flex;
+    gap:10px;
+}
+
+.pages button{
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#181A27;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.pages button.active{
+    background:#7C3AED;
+}
+
+
+/* ==========================================
+   ADD PRODUCT MODAL
+========================================== */
+
+.modal-overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(8px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    animation:fadeIn .25s ease;
+}
+
+.modal{
+    width:700px;
+    max-width:95%;
+
+    max-height:90vh;
+    overflow-y:auto;
+
+    background:#181A27;
+
+    border-radius:24px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    animation:slideUp .3s ease;
+}
+
+/* ================= HEADER ================= */
+
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:24px 30px;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.modal-header h2{
+    font-size:28px;
+    font-weight:700;
+}
+
+.modal-header button{
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#202334;
+
+    color:white;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.3s;
+}
+
+.modal-header button:hover{
+    background:#7C3AED;
+}
+
+/* ================= BODY ================= */
+
+.modal-body{
+    display:flex;
+    flex-direction:column;
+
+    gap:24px;
+
+    padding:30px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.form-group label{
+    font-size:14px;
+    font-weight:600;
+    color:#B8BED7;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    background:#202334;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:14px;
+
+    padding:15px 18px;
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.form-group textarea{
+    resize:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#7C3AED;
+
+}
+
+/* ================= TWO COLUMNS ================= */
+
+.two-columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+
+
+/* ================= FOOTER ================= */
+
+.modal-footer{
+
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+
+    margin-top:10px;
+}
+
+.cancel-btn{
+
+    height:52px;
+    padding:0 24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#26293A;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.cancel-btn:hover{
+
+    background:#35394D;
+
+}
+
+.save-btn{
+
+    height:52px;
+    padding:0 28px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#7C3AED;
+
+    color:white;
+
+    font-size:15px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.save-btn:hover{
+
+    background:#8B5CF6;
+
+    transform:translateY(-2px);
+
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+@keyframes slideUp{
+
+    from{
+        transform:translateY(40px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:700px){
+
+.modal{
+
+    width:95%;
+
+}
+
+.two-columns{
+
+    grid-template-columns:1fr;
+
+}
+
+.modal-body{
+
+    padding:20px;
+
+}
+
+.modal-header{
+
+    padding:20px;
+
+}
+
+}
+
+/* ==========================================
+   ORDERS PAGE
+========================================== */
+
+.orders-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+.orders-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.orders-header h1{
+
+    font-size:40px;
+
+    font-weight:700;
+
+}
+
+.orders-header p{
+
+    color:#8B90A7;
+
+    margin-top:8px;
+
+}
+
+.orders-table-card{
+
+    background:#181A27;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+}
+
+.orders-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.orders-table thead{
+
+    background:#202334;
+
+}
+
+.orders-table th{
+
+    padding:20px;
+
+    text-align:left;
+
+    color:#9CA3AF;
+
+    font-size:14px;
+
+}
+
+.orders-table td{
+
+    padding:20px;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+.orders-table tbody tr{
+
+    transition:.3s;
+
+}
+
+.orders-table tbody tr:hover{
+
+    background:#202334;
+
+}
+
+/* ==========================================
+   STATUS BADGES
+========================================== */
+
+.order-status{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.order-status.completed{
+
+    background:#143B27;
+
+    color:#4ADE80;
+
+}
+
+.order-status.pending{
+
+    background:#3A2F14;
+
+    color:#FACC15;
+
+}
+
+.order-status.processing{
+
+    background:#152D4D;
+
+    color:#60A5FA;
+
+}
+
+.order-status.cancelled{
+
+    background:#3B1616;
+
+    color:#F87171;
+
+}
+
+
+/* ==========================================
+   STAFF PAGE
+========================================== */
+
+.staff-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+.staff-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.staff-header h1{
+
+    font-size:40px;
+
+}
+
+.staff-header p{
+
+    margin-top:8px;
+
+    color:#8B90A7;
+
+}
+
+.staff-table-card{
+
+    background:#181A27;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+}
+
+.staff-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.staff-table thead{
+
+    background:#202334;
+
+}
+
+.staff-table th{
+
+    padding:20px;
+
+    text-align:left;
+
+    color:#9CA3AF;
+
+}
+
+.staff-table td{
+
+    padding:20px;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+.staff-table tbody tr:hover{
+
+    background:#202334;
+
+}
+
+.staff-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.staff-avatar{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:#7C3AED;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:20px;
+
+}
+
+
+/* ==========================================
+   MANAGER PAGE
+========================================== */
+
+.manager-page{
+
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+
+}
+
+.manager-header h1{
+
+    font-size:40px;
+
+}
+
+.manager-header p{
+
+    margin-top:8px;
+    color:#8B90A7;
+
+}
+
+.manager-table-card{
+
+    background:#181A27;
+    border-radius:22px;
+    overflow:hidden;
+
+}
+
+.manager-table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+.manager-table thead{
+
+    background:#202334;
+
+}
+
+.manager-table th{
+
+    padding:20px;
+    text-align:left;
+    color:#9CA3AF;
+
+}
+
+.manager-table td{
+
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+.manager-table tbody tr:hover{
+
+    background:#202334;
+
+}
+
+.manager-actions{
+
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+
+}
+
+.promote-btn,
+.suspend-btn,
+.remove-btn{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 16px;
+
+    border:none;
+    border-radius:12px;
+
+    color:white;
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:600;
+
+}
+
+.promote-btn{
+
+    background:#2563EB;
+
+}
+
+.suspend-btn{
+
+    background:#F59E0B;
+
+}
+
+.remove-btn{
+
+    background:#DC2626;
+
+}
+
+.promote-btn:hover{
+
+    background:#3B82F6;
+
+}
+
+.suspend-btn:hover{
+
+    background:#FBBF24;
+
+}
+
+.remove-btn:hover{
+
+    background:#EF4444;
+
+}
+
+/* ==========================================
+   USERS
+========================================== */
+
+.users-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.users-table-card{
+    background:#181A27;
+    border-radius:22px;
+    overflow:hidden;
+}
+
+.users-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.users-table thead{
+    background:#202334;
+}
+
+.users-table th,
+.users-table td{
+    padding:20px;
+    text-align:left;
+}
+
+.users-table tbody tr:hover{
+    background:#202334;
+}
+
+/* ==========================================
+   ANALYTICS
+========================================== */
+
+.analytics-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.analytics-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.analytics-card{
+    background:#181A27;
+    border-radius:20px;
+    padding:30px;
+}
+
+.analytics-card h3{
+    color:#9CA3AF;
+    margin-bottom:10px;
+}
+
+.analytics-card h2{
+    font-size:34px;
+}
+
+/* ==========================================
+   SETTINGS
+========================================== */
+
+.settings-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.settings-card{
+    background:#181A27;
+    border-radius:22px;
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.setting-item{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.setting-item input,
+.setting-item select{
+    height:52px;
+    border:none;
+    border-radius:14px;
+    background:#202334;
+    color:white;
+    padding:0 18px;
+}
+
+
+/* ==========================================
+   PRODUCT HEADER BUTTONS
+========================================== */
+
+.header-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+}
+
+.import-btn{
+
+    height:56px;
+
+    padding:0 24px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#202334;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.import-btn:hover{
+
+    background:#2B2F45;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   IMPORT MOVIE
+========================================== */
+
+.movie-search{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#202334;
+
+    border-radius:16px;
+
+    padding:16px 20px;
+
+}
+
+.movie-search input{
+
+    flex:1;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.movie-results{
+
+    margin-top:25px;
+
+    min-height:250px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#8B90A7;
+
+}
+
+/* ================================
+   IMPORT MOVIES
+================================ */
+
+.import-modal{
+
+    width:1100px;
+
+    max-width:95%;
+
+    max-height:90vh;
+
+    background:#181A27;
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+.modal-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 30px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    background:#181A27;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:20;
+
+}
+
+.modal-header h2{
+
+    color:white;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.modal-header button{
+
+    width:44px;
+
+    height:44px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#24283A;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.modal-header button:hover{
+
+    background:#7C3AED;
+
+}
+
+.modal-body{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+}
+
+.movie-search{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#202334;
+
+    padding:16px 20px;
+
+    border-radius:14px;
+
+    margin-bottom:30px;
+
+}
+
+.movie-search svg{
+
+    color:#9CA3AF;
+
+    font-size:20px;
+
+}
+
+.movie-search input{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.movie-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+
+    gap:25px;
+
+}
+
+.movie-card{
+
+    background:#202334;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.movie-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.movie-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+}
+
+.movie-card h4{
+
+    padding:15px 15px 5px;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+.movie-card p{
+
+    padding:0 15px;
+
+    color:#8B90A7;
+
+    font-size:14px;
+
+    margin-bottom:18px;
+
+}
+
+.movie-card button{
+
+    margin:0 15px 15px;
+
+    width:calc(100% - 30px);
+
+}
+
+.loading{
+
+    text-align:center;
+
+    color:#9CA3AF;
+
+    font-size:16px;
+
+    padding:40px 0;
+
+}

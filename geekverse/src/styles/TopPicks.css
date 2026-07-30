@@ -1,0 +1,43 @@
+.top-picks{
+    background:#12121c;
+
+    border:1px solid #24263a;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    margin-top:25px;
+}
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.card-header h3{
+
+    font-size:24px;
+}
+
+.card-header button{
+
+    background:none;
+
+    color:#9f9fa9;
+
+    font-size:14px;
+}
+
+
+
+.pick-grid img:hover{
+
+    transform:scale(1.05);
+}

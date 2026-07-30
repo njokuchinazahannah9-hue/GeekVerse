@@ -1,0 +1,208 @@
+.comic-details {
+  padding: 40px;
+  color: white;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #8b5cf6;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: white;
+}
+
+.comic-header {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.comic-cover {
+  width: 360px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .6);
+}
+
+.comic-content {
+  flex: 1;
+}
+
+.comic-content h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.comic-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 20px 0;
+  color: gold;
+  font-size: 20px;
+}
+
+.comic-rating span {
+  color: white;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.comic-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.comic-meta p {
+  background: #171722;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.comic-description {
+  margin-top: 25px;
+  line-height: 1.9;
+  color: #d6d6d6;
+}
+
+.comic-description p {
+  margin-bottom: 15px;
+}
+
+.comic-actions button{
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:16px 28px;
+
+min-width:170px;
+height:56px;
+
+border:none;
+border-radius:14px;
+
+font-size:17px;
+font-weight:600;
+
+cursor:pointer;
+transition:.3s;
+}
+
+.comic-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 16px 28px;
+
+  border: none;
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  transition: .3s;
+}
+
+.comic-actions button:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(0,0,0,.35);
+}
+.comic-actions .wishlist-btn{
+background:#ff4081;
+color:white;
+}
+
+.comic-actions .cart-btn{
+background:#7c4dff;
+color:white;
+}
+
+.comic-actions .buy-btn{
+background:#12c95d;
+color:white;
+}
+.cart-btn{
+background:#7c4dff;
+color:white;
+}
+
+.buy-btn{
+background:#12c95d;
+color:white;
+}
+
+.cart-btn {
+  background: #7c4dff;
+  color: white;
+}
+
+.buy-btn {
+  background: #00c853;
+  color: white;
+}
+
+@media (max-width:1000px) {
+
+  .comic-header {
+    flex-direction: column;
+  }
+
+  .comic-cover {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+  }
+
+  .comic-meta {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.comic-description{
+margin-top:35px;
+line-height:1.8;
+color:#d8d8d8;
+}
+
+.info-section{
+margin-top:40px;
+}
+
+.info-section h2{
+margin-bottom:18px;
+font-size:26px;
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.tag{
+background:#23233b;
+padding:12px 18px;
+border-radius:40px;
+font-size:15px;
+transition:.3s;
+cursor:pointer;
+}
+
+.tag:hover{
+background:#8b5cf6;
+transform:translateY(-3px);
+}

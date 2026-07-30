@@ -1,0 +1,161 @@
+.settings-page {
+  padding: 35px;
+  color: white;
+}
+
+.settings-page h1 {
+  font-size: 38px;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+.settings-card {
+  background: #1d1d2b;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+  transition: .3s;
+}
+
+.settings-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(139, 92, 246, .25);
+}
+
+.settings-card h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.setting-row:last-child {
+  margin-bottom: 0;
+}
+
+.setting-value {
+  color: #b5b5c6;
+  font-size: 15px;
+}
+
+.premium-text {
+  color: gold;
+  font-weight: bold;
+}
+
+.settings-card select {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  background: #2a2a40;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.settings-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #8b5cf6;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.settings-btn:hover {
+  background: #7646ef;
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  background: #ef4444;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+.danger-btn {
+  background: #ff9800;
+}
+
+.danger-btn:hover {
+  background: #fb8c00;
+}
+
+.about-text {
+  color: #bdbdcc;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* ---------- Premium Toggle Switch ---------- */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #555;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .35s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: .35s;
+}
+
+.switch input:checked + .slider {
+  background: #8b5cf6;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+@media (max-width:768px) {
+
+  .settings-page {
+    padding: 20px;
+  }
+
+  .settings-card {
+    padding: 22px;
+  }
+
+  .setting-row {
+    gap: 15px;
+  }
+
+}

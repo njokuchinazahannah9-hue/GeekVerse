@@ -1,0 +1,92 @@
+.register-page{
+    min-height:100vh;
+    background:#0b0b10;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.register-card{
+    width:100%;
+    max-width:500px;
+    background:#171722;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+.register-card h1{
+    color:#fff;
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.register-card p{
+    color:#aaa;
+    margin-bottom:30px;
+}
+
+.register-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.register-form input{
+    padding:16px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#262636;
+    color:white;
+    font-size:16px;
+}
+
+.register-form input::placeholder{
+    color:#888;
+}
+
+.register-btn{
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#8b5cf6;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    background:#7348f0;
+}
+
+.google-btn{
+    margin-top:18px;
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    background:transparent;
+    color:white;
+    border:1px solid #555;
+    cursor:pointer;
+}
+
+.google-btn:hover{
+    background:#242433;
+}
+
+.register-links{
+    margin-top:25px;
+    text-align:center;
+}
+
+.register-links a{
+    color:#9b6cff;
+    text-decoration:none;
+}
+
+.register-links a:hover{
+    text-decoration:underline;
+}

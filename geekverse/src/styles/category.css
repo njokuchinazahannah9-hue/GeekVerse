@@ -1,0 +1,73 @@
+.category-row{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+.category-card{
+
+    background:#151520;
+
+    border:1px solid #232338;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.category-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#8B5CF6;
+
+}
+
+.category-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    background:#8B5CF6;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+}
+
+.category-card h3{
+
+    margin-bottom:6px;
+
+}
+
+.category-card p{
+
+    color:#9CA3AF;
+
+}
