@@ -6,7 +6,6 @@ import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from "./context/WishlistContext";
 import { UserProvider } from "./context/UserContext";
 import { AuthProvider } from "./context/AuthContext";
-import "./styles/Responsive.css";
 import "./styles/dailyReward.css";
 import "./styles/upcoming.css";
 import "./styles/settings.css";
@@ -34,7 +33,7 @@ import "./styles/login.css";
 import "./styles/register.css";
 import "./styles/comics.css";
 import "./styles/comicDetails.css";
-import "./styles/Responsive.css";
+import "./styles/responsive.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
