@@ -6,7 +6,6 @@ import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from "./context/WishlistContext";
 import { UserProvider } from "./context/UserContext";
 import { AuthProvider } from "./context/AuthContext";
-import "./styles/responsive.css";
 import "./styles/dailyReward.css";
 import "./styles/upcoming.css";
 import "./styles/settings.css";
