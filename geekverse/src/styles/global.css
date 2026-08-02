@@ -747,3 +747,174 @@ padding:35px;
 }
 
 } */
+
+/* ==========================================
+   HOME RESPONSIVE
+========================================== */
+
+@media screen and (max-width:1024px){
+
+.dashboard{
+
+display:block;
+
+}
+
+.main-area{
+
+width:100%;
+
+margin-left:0;
+
+}
+
+.top-navbar{
+
+padding:15px 20px;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+.search-bar{
+
+width:100%;
+
+order:2;
+
+}
+
+.nav-right{
+
+width:100%;
+
+justify-content:space-between;
+
+}
+
+}
+
+@media screen and (max-width:768px){
+
+.top-navbar{
+
+padding:12px 15px;
+
+}
+
+.movies-hero,
+.manga-hero{
+
+height:65vh;
+
+border-radius:18px;
+
+margin:15px;
+
+}
+
+.movies-hero-overlay,
+.manga-hero-overlay{
+
+padding:25px;
+
+}
+
+.movies-hero h1,
+.manga-hero h1{
+
+font-size:36px;
+
+line-height:1.15;
+
+}
+
+.movies-hero p,
+.hero-description{
+
+width:100%;
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.hero-buttons button{
+
+width:100%;
+
+}
+
+.hero-arrow{
+
+display:none;
+
+}
+
+.hero-dots{
+
+justify-content:center;
+
+}
+
+}
+
+@media screen and (max-width:480px){
+
+.movies-hero,
+.manga-hero{
+
+height:60vh;
+
+margin:10px;
+
+}
+
+.movies-hero-overlay,
+.manga-hero-overlay{
+
+padding:18px;
+
+}
+
+.movies-hero h1,
+.manga-hero h1{
+
+font-size:28px;
+
+}
+
+.movies-hero span,
+.hero-tag{
+
+font-size:12px;
+
+padding:8px 16px;
+
+}
+
+.movies-hero p,
+.hero-description{
+
+font-size:14px;
+
+}
+
+.loading-more{
+
+padding:40px 0;
+
+}
+
+}
