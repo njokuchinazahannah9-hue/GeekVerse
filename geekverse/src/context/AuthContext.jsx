@@ -17,6 +17,7 @@ import {
   updatePassword,
   EmailAuthProvider,
   reauthenticateWithCredential,
+  updateProfile,
 } from "firebase/auth";
 
 import {
@@ -43,7 +44,7 @@ export function AuthProvider({ children }) {
       await setDoc(userRef, {
         uid: user.uid,
         name: user.displayName || "",
-        email: user.email,
+        email: user.email || "",
         phone: "",
         country: "",
         bio: "",
@@ -51,6 +52,9 @@ export function AuthProvider({ children }) {
         wallet: 0,
         geekCoins: 0,
         premium: false,
+        membership: "Free",
+        role: "Customer",
+        status: "Active",
         orders: 0,
         purchaseHistory: [],
         createdAt: serverTimestamp(),
@@ -58,17 +62,23 @@ export function AuthProvider({ children }) {
     }
   }
 
-  async function register(email, password) {
-    const result =
-      await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+  async function register(name, email, password) {
+    const result = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+    await updateProfile(result.user, {
+      displayName: name,
+    });
 
     await sendEmailVerification(result.user);
 
-    await createUserProfile(result.user);
+    await createUserProfile({
+      ...result.user,
+      displayName: name,
+    });
 
     return result;
   }
@@ -108,11 +118,10 @@ export function AuthProvider({ children }) {
   ) {
     if (!auth.currentUser) return;
 
-    const credential =
-      EmailAuthProvider.credential(
-        auth.currentUser.email,
-        currentPassword
-      );
+    const credential = EmailAuthProvider.credential(
+      auth.currentUser.email,
+      currentPassword
+    );
 
     await reauthenticateWithCredential(
       auth.currentUser,

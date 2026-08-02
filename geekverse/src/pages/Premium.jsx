@@ -1,9 +1,48 @@
 import Sidebar from "../components/Sidebar";
 import TopNavbar from "../components/TopNavbar";
-
+import { useNavigate } from "react-router-dom";
+import { useUser } from "../context/UserContext";
 import "../styles/Premium.css";
 
 function Premium() {
+  const navigate = useNavigate();
+
+  const { user, updateUser } = useUser();
+
+  async function choosePlan(plan) {
+    if (user.premium) {
+      alert("🎉 You're already a Premium Member!");
+      return;
+    }
+
+    const price = plan === "Monthly" ? 10 : 90;
+
+    if (user.wallet < price) {
+      alert(
+        `Insufficient Wallet Balance.\n\nYou need $${price} to purchase this plan.`
+      );
+      return;
+    }
+
+    try {
+      await updateUser({
+        wallet: user.wallet - price,
+        premium: true,
+        membership: "Premium",
+        geekCoins: (user.geekCoins || 0) + 500,
+      });
+
+      alert(
+        `🎉 Congratulations!\n\nWelcome to GeekVerse Premium (${plan})!`
+      );
+
+      navigate("/profile");
+    } catch (error) {
+      console.error(error);
+      alert("Failed to activate Premium.");
+    }
+  }
+
   return (
     <div className="dashboard">
 
@@ -20,12 +59,15 @@ function Premium() {
             <h1>👑 GeekVerse Premium</h1>
 
             <p>
-              Upgrade your GeekVerse experience and unlock unlimited entertainment.
+              Upgrade your GeekVerse experience and unlock unlimited
+              entertainment.
             </p>
 
           </div>
 
           <div className="plans">
+
+            {/* Monthly */}
 
             <div className="plan-card">
 
@@ -35,11 +77,18 @@ function Premium() {
 
               <p>/month</p>
 
-              <button>
-                Choose Plan
+              <button
+                disabled={user.premium}
+                onClick={() => choosePlan("Monthly")}
+              >
+                {user.premium
+                  ? "Premium Active"
+                  : "Choose Plan"}
               </button>
 
             </div>
+
+            {/* Yearly */}
 
             <div className="plan-card popular">
 
@@ -55,8 +104,13 @@ function Premium() {
 
               <small>Save 25%</small>
 
-              <button>
-                Choose Plan
+              <button
+                disabled={user.premium}
+                onClick={() => choosePlan("Yearly")}
+              >
+                {user.premium
+                  ? "Premium Active"
+                  : "Choose Plan"}
               </button>
 
             </div>
@@ -81,7 +135,7 @@ function Premium() {
 
               <div>🚫 No Ads</div>
 
-              <div>🪙 Bonus Geek Coins</div>
+              <div>🪙 500 Bonus Geek Coins</div>
 
               <div>🤖 AI Recommendations</div>
 

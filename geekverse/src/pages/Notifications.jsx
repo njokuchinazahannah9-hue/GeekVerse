@@ -1,62 +1,119 @@
 import { useState, useEffect } from "react";
+
 import Sidebar from "../components/Sidebar";
 import TopNavbar from "../components/TopNavbar";
 
+import { useAuth } from "../context/AuthContext";
+
+import {
+  collection,
+  query,
+  where,
+  orderBy,
+  onSnapshot,
+  updateDoc,
+  doc,
+  writeBatch,
+} from "firebase/firestore";
+
+import { db } from "../firebase/firebase";
 
 function Notifications() {
+
+  const { currentUser } = useAuth();
+
   const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
-    const saved =
-      JSON.parse(localStorage.getItem("notifications")) || [
-        {
-          id: 1,
-          title: "Welcome to GeekVerse!",
-          message: "Enjoy exploring Movies, Manga, Books and Comics.",
-          read: false,
-        },
-        {
-          id: 2,
-          title: "New Movies Added",
-          message: "Check out the latest trending movies.",
-          read: false,
-        },
-        {
-          id: 3,
-          title: "Special Offer",
-          message: "50% discount on selected premium content.",
-          read: false,
-        },
-      ];
 
-    setNotifications(saved);
-    localStorage.setItem(
-      "notifications",
-      JSON.stringify(saved)
-    );
-  }, []);
+    if (!currentUser) return;
 
-  function markAsRead(id) {
-    const updated = notifications.map((item) =>
-      item.id === id
-        ? { ...item, read: true }
-        : item
+    const q = query(
+
+      collection(db, "notifications"),
+
+      where("userId", "==", currentUser.uid),
+
+      orderBy("createdAt", "desc")
+
     );
 
-    setNotifications(updated);
+    const unsubscribe = onSnapshot(
 
-    localStorage.setItem(
-      "notifications",
-      JSON.stringify(updated)
+      q,
+
+      (snapshot) => {
+
+        const data = snapshot.docs.map((doc) => ({
+
+          id: doc.id,
+
+          ...doc.data(),
+
+        }));
+
+        setNotifications(data);
+
+      }
+
     );
+
+    return unsubscribe;
+
+  }, [currentUser]);
+
+  async function markAsRead(id) {
+
+    try {
+
+      await updateDoc(
+
+        doc(db, "notifications", id),
+
+        {
+
+          read: true,
+
+        }
+
+      );
+
+    } catch (error) {
+
+      console.error(error);
+
+    }
+
   }
 
-  function clearAll() {
-    setNotifications([]);
-    localStorage.setItem("notifications", "[]");
+  async function clearAll() {
+
+    try {
+
+      const batch = writeBatch(db);
+
+      notifications.forEach((note) => {
+
+        batch.delete(
+
+          doc(db, "notifications", note.id)
+
+        );
+
+      });
+
+      await batch.commit();
+
+    } catch (error) {
+
+      console.error(error);
+
+    }
+
   }
 
   return (
+
     <div className="dashboard">
 
       <Sidebar />
@@ -68,6 +125,7 @@ function Notifications() {
         <div className="page-container">
 
           <div className="page-header">
+
             <h1>Notifications</h1>
 
             <button
@@ -76,23 +134,40 @@ function Notifications() {
             >
               Clear All
             </button>
+
           </div>
 
           {notifications.length === 0 ? (
-            <h3>No notifications</h3>
+
+            <h3>No Notifications Yet.</h3>
+
           ) : (
+
             notifications.map((note) => (
+
               <div
                 key={note.id}
                 className={`notification-card ${
                   note.read ? "read" : ""
                 }`}
               >
+
                 <h3>{note.title}</h3>
 
                 <p>{note.message}</p>
 
+                <small>
+
+                  {note.createdAt?.toDate
+                    ? note.createdAt
+                        .toDate()
+                        .toLocaleString()
+                    : ""}
+
+                </small>
+
                 {!note.read && (
+
                   <button
                     onClick={() =>
                       markAsRead(note.id)
@@ -100,19 +175,23 @@ function Notifications() {
                   >
                     Mark as Read
                   </button>
+
                 )}
+
               </div>
+
             ))
+
           )}
 
         </div>
 
       </main>
 
-    
-
     </div>
+
   );
+
 }
 
 export default Notifications;

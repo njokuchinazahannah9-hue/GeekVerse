@@ -14,6 +14,9 @@ import { useUser } from "../context/UserContext";
 import QuickPanel from "./QuickPanel";
 import NotificationDropdown from "./NotificationDropdown";
 
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase/firebase";
+
 function TopNavbar() {
   const [search, setSearch] = useState("");
 
@@ -54,6 +57,18 @@ function TopNavbar() {
       );
     };
   }, []);
+
+  async function handleLogout() {
+  try {
+    await signOut(auth);
+
+    navigate("/login");
+
+  } catch (error) {
+    console.error(error);
+    alert("Failed to logout.");
+  }
+}
 
   function handleSearch(e) {
   if (e) e.preventDefault();
@@ -126,29 +141,38 @@ function TopNavbar() {
 
         {/* Profile */}
         <div
-          className="nav-profile"
-          onClick={() =>
-            navigate("/profile")
-          }
-        >
-          <img
-            src={
-              user.avatar ||
-              "https://i.pravatar.cc/150"
-            }
-            alt={user.name}
-          />
+  className="nav-profile"
+  onClick={() => navigate("/profile")}
+>
+  <img
+    src={
+      user.avatar ||
+      "https://i.pravatar.cc/150"
+    }
+    alt={user.name}
+  />
 
-          <div>
-            <h4>{user.name}</h4>
+  <div>
+    <h4>{user.name}</h4>
 
-            <p>
-              {user.premium
-                ? "Premium Member"
-                : "Free Member"}
-            </p>
-          </div>
-        </div>
+    <p>
+      {user.premium
+        ? "Premium Member"
+        : "Free Member"}
+    </p>
+  </div>
+</div>
+
+{user && (
+
+  <button
+    className="logout-btn"
+    onClick={handleLogout}
+  >
+    Logout
+  </button>
+
+)}
 
         {/* Premium */}
         <button

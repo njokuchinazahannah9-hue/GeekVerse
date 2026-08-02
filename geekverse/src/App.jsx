@@ -43,7 +43,7 @@ import Staff from "./admin/pages/Staff";
 import Analytics from "./admin/pages/Analytics";
 import SettingsAdmin from "./admin/pages/Settings";
 import Managers from "./admin/pages/Managers";
-
+import ProtectedAdminRoute from "./components/ProtectedAdminRoute";
 function App() {
   return (
     <Routes>
@@ -177,7 +177,14 @@ function App() {
     ADMIN PANEL
 ========================== */}
 
-<Route path="/admin" element={<AdminLayout />}>
+<Route
+  path="/admin"
+  element={
+    <ProtectedAdminRoute>
+      <AdminLayout />
+    </ProtectedAdminRoute>
+  }
+>
 
   <Route
     index

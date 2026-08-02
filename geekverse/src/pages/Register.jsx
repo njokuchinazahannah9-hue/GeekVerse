@@ -36,7 +36,11 @@ function Register() {
     try {
       setLoading(true);
 
-      await register(form.email, form.password);
+      await register(
+  form.name,
+  form.email,
+  form.password
+);
 
       alert(
         "Registration successful.\n\nA verification email has been sent."
